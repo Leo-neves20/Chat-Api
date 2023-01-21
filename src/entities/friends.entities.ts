@@ -7,6 +7,9 @@ class Friends{
     @PrimaryGeneratedColumn("increment")
     id: number
 
+    @ManyToOne(() => Users, user => user.friends)
+    friend: Users
+
     @ManyToOne(() => Users, user => user.id)
     user: Users
 }

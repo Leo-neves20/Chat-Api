@@ -28,7 +28,7 @@ class Users {
     @OneToMany(() => Talks, talks => talks.userAt)
     talks: Talks[]
 
-    @OneToMany(() => Friends, friends => friends.user)
+    @OneToMany(() => Friends, friends => friends.friend)
     friends: Friends[]
 
 }
